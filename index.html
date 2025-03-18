@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mi Amor</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #f1a3c2, #fdb7ce);
+            color: #333;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        header {
+            padding: 50px;
+            background: rgba(255, 255, 255, 0.8);
+            margin-bottom: 20px;
+            position: relative;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #ff5e8e;
+        }
+        .photo-section {
+            margin: 40px auto;
+            max-width: 800px;
+            position: relative;
+        }
+        .photo {
+            margin: 20px;
+            position: relative;
+        }
+        .photo img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .photo p {
+            font-style: italic;
+            color: #666;
+        }
+        .photo:hover::after {
+            content: "♥";
+            position: absolute;
+            font-size: 30px;
+            color: #ff5e8e;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: heartRise 2s ease-out forwards;
+        }
+        @keyframes heartRise {
+            0% { opacity: 1; top: -20px; }
+            100% { opacity: 0; top: -100px; }
+        }
+        .surprise-btn {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background: #ff5e8e;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .surprise-btn:hover {
+            transform: scale(1.1);
+        }
+        #surprise {
+            display: none;
+            font-size: 2em;
+            color: #ff5e8e;
+            margin: 20px;
+            animation: pop 0.5s ease-in-out;
+        }
+        @keyframes pop {
+            0% { transform: scale(0); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <header>
+        <h1>Para Mi Amor</h1>
+        <p>La persona más especial del mundo</p>
+        <img src="imagenes/WhatsApp Image 2025-03-17 at 11.27.37 PM.jpeg" alt="Nosotros" style="max-width: 500px; border-radius: 15px;">
+    </header>
+
+    <div class="photo-section">
+        <h2>Nuestra Historia</h2>
+        <div class="photo">
+            <img src="imagenes/WhatsApp Image 2025-03-17 at 11.25.13 PM (2).jpeg" alt="Primer día">
+            <p>"El día que nos conocimos - 17 de octubre de 2023, ese dia me respondiste una nota de mi feyman, y ese mensaje cambio mi vida por que gracias a ese mensaje te conoci, puede conocer al amor de mi vida, a una niña tan dulce, tan inteligente, tan hermosa, tan noble y sobre todo unica en este mundo"</p>
+        </div>
+        <div class="photo">
+            <img src="imagenes/WhatsApp Image 2025-03-17 at 11.27.37 PM.jpeg" alt="Aventura">
+            <p>"Nuestra primera aventura juntos" La primera aventura juntos para mi fue cuando cumplimos 1 mes de novios, ese dia te veias tan hermosa, con ese vestido blanco tan lindo, sin duda la niña mas hermosa de la plaza, comimos helado, nos dimos dulces, escuchamos canciónes y vimos tu pelicula favorita, de tods los chicos que me enamore, para mi ese dia fue muy hermoso.</p>
+        </div>
+    </div>
+
+    <div class="photo-section">
+        <h2>Por Qué Te Amo</h2>
+        <p>Por que me demostraste algo que otras personas no, amor, quererme tal y como soy, valorarme, cuidarme, desearme, eso para mi fue muy hermoso y algo que sin duda me enamoro, algo que tambien te amo es:</p>
+        <p>Porque tu risa ilumina mi mundo.</p>
+        <p>Porque siempre sabes cómo hacerme feliz.</p>
+        <p>Porque eres mi hogar.</p>
+        <p>por esos ojitos que brillan como 2 estrellas</p>
+        <p>por ese corazon tan noble y puro</p>
+        <p>por ser tu</p>
+    </div>
+
+    <div class="photo-section">
+        <button class="surprise-btn" onclick="showSurprise()">Haz clic para una sorpresa</button>
+        <div id="surprise">¡Te amo con todo mi corazón mi pequeña princesa muchas gracias por estos 3 meses de relación, han sido los mejores y espero que sigan siendo muchos más! ♥</div>
+    </div>
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        // Configuración de partículas
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 50,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "shape": {
+                    "type": "image",
+                    "image": {
+                        "src": "https://i.imgur.com/8nXvR9F.png", // Imagen de un corazón
+                        "width": 100,
+                        "height": 100
+                    }
+                },
+                "opacity": {
+                    "value": 0.7,
+                    "random": true
+                },
+                "size": {
+                    "value": 20,
+                    "random": true
+                },
+                "line_linked": {
+                    "enable": false
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "bottom",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out"
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    }
+                },
+                "modes": {
+                    "repulse": {
+                        "distance": 100,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+
+        // Mostrar sorpresa
+        function showSurprise() {
+            const surprise = document.getElementById("surprise");
+            surprise.style.display = "block";
+        }
+    </script>
+</body>
+</html>
